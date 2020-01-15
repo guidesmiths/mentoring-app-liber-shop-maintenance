@@ -1,0 +1,35 @@
+.layout{
+    display:grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 'header header' '. nav_h' 'nav_v content';
+    grid-column-gap: 40px;
+    header{
+        grid-area: header;
+        display: flex;
+        align-items: center;
+        margin: 25px 15px;
+        figure{
+            margin: 0;
+            margin-right: 15px;
+            width: 40px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        h1{
+            font-weight: normal;
+        }
+    }
+    .nav_horizontal{
+        grid-area: nav_h;
+        margin-bottom: 25px;
+    }
+    .nav_vertical{
+        grid-area: nav_v;
+    }
+    .content{
+        grid-area: content;
+    }  
+}

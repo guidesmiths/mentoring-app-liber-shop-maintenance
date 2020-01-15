@@ -1,0 +1,19 @@
+.homePage{
+    .step{
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        grid-template-areas: 'indicator title' '. text';
+        grid-column-gap: 15px;
+        margin-bottom: 15px;
+    }
+    .indicator{
+       grid-area: indicator;
+    }
+    h3{
+        grid-area: title;
+        align-self: center;
+    }
+    p{
+        grid-area: text;
+    }
+}

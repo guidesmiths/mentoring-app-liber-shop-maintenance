@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+
+nav{
+    ul{
+        margin:0;
+        padding: 0;
+        li{
+            list-style: none;
+            display:flex;
+            background: $color_main;
+            color:#fff;
+            padding:15px 15px;
+            text-transform: capitalize;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #fff;
+            span{
+                margin-right: 10px;
+            }
+        }
+    }
+}
