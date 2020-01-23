@@ -1,0 +1,10 @@
+.clearDataPage{
+    display: flex;
+    align-items: center;
+    h3{
+        font-weight: normal;
+    }
+    .item + .item {
+        margin-left: 15px;
+    }
+}

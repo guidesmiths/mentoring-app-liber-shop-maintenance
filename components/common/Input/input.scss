@@ -1,0 +1,38 @@
+@import '../../../styles/variables';
+.cs-input{
+     position: relative;
+     &:focus-within  .options{
+           max-height: 200px;
+       }
+    input{
+       height:40px;
+       border: 1px solid #000;
+       padding:5px 10px;
+       width: 100%;
+       font-size: 16px;
+    }
+    .options{
+        position: absolute;
+        padding:0; 
+        margin: 0;
+        border: 1px solid grey;
+        border-top: none;
+        border-bottom: none;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .option-list{
+        list-style: none;
+        padding:5px 10px;
+        line-height: 40px;
+        border-bottom: 1px solid grey;
+        cursor: pointer;
+        transition: background 0.3s ease, color 0.3s ease;
+        &:hover{
+            background-color: lighten($color-dark,50%);
+            color:#fff
+        }
+        
+    }
+}

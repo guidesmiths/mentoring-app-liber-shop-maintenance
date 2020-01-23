@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+
+.cs-button{
+   background: $color-main;
+   color:#fff;
+   padding:10px 15px;
+   border:none;
+   border-radius: 4px;
+   font-size: 14px;
+   text-transform: capitalize;
+}

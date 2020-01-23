@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
       </header>
      
       <div className="nav_horizontal">
-        <h3>Instruction</h3>
+        <h2>Instruction</h2>
       </div>
       <div className="nav_vertical">
         <Nav />
