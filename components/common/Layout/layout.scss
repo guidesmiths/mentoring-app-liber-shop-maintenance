@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .layout{
     display:grid;
     grid-template-columns: 200px 1fr;
@@ -27,6 +29,20 @@
     .nav_horizontal{
         grid-area: nav_h;
         margin-bottom: 25px;
+        h2{
+            display:inline-block;
+            position: relative;
+        }
+        h2:after{
+            content: "";
+            display: block;
+            width: 80%;
+            height: 2px;
+            background: $color-main;
+            position: absolute;
+            left:50%;
+            transform: translate(-50%,0);
+        }
     }
     .nav_vertical{
         grid-area: nav_v;

@@ -1,9 +1,12 @@
 import React from 'react';
+import { Layout } from '../../common';
 
 const CreateIndexPage = () => {
 
   return (
-    <div>create index page</div>
+    <Layout title='Current Index'>
+      create index page
+    </Layout>
   );
 };
 

@@ -5,18 +5,18 @@
     },
     {
       "menuItem": "create new index",
-      "link": "/"
+      "link": "/createIndex"
     },
     {
       "menuItem": "change target index",
-      "link": "/"
+      "link": "/changeTargetIndex"
     },
     {
       "menuItem": "import data",
-      "link": "/"
+      "link": "/importData"
     },
     {
       "menuItem": "change search index",
-      "link": "/"
+      "link": "/changeSearchIndex"
     }
   ]

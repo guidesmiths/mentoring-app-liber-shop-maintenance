@@ -1,1 +1,4 @@
-["Liber-development","Liber-staging","Liber-production"]
+{
+    "database" : ["Liber-development","Liber-staging","Liber-production"],
+    "liber_env" : ["development", "staging", "production"]
+}

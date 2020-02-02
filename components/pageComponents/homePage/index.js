@@ -1,5 +1,5 @@
 import React from 'react';
-import { Indicator } from '../../common';
+import { Indicator, Layout } from '../../common';
 import instruction from '../../../fixtures/instruction.json';
 import './homePage.scss';
 
@@ -15,9 +15,11 @@ const HomePage = () => {
   );
 
   return (
-    <div className='homePage'>
-      {renderInstruction()}
-    </div>
+    <Layout title='Instruction'>
+      <div className='homePage'>
+        {renderInstruction()}
+      </div>
+    </Layout>
   );
 
 };

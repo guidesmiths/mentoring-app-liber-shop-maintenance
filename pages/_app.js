@@ -1,13 +1,10 @@
 import App from 'next/app';
 import React from 'react';
-import { Layout } from '../components/common';
 import '../styles/general.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Component {...pageProps} />
   );
 }
 
