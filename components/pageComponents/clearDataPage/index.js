@@ -6,7 +6,7 @@ import { buttonText, dbOptions } from '../../../fixtures';
 const ClearDataPage = () => {
 
   return (
-    <Layout title='Database'>
+    <Layout step={1}>
       <div className='clearDataPage'>
         <h3 className='item'>Choose DB</h3>
         <Input type='optional' options={dbOptions.database} placeholder='Choose database' className='item' width={200} />

@@ -2,26 +2,26 @@
     {
         "step": 1,
         "title": "Delete datas from detabase",
-        "text": "Step 1, you should choose a database from which you want to clean the data,this process will clean the previous products/series and current products/series table."
+        "text": "You should choose a database from which you want to clean the data,this process will clean the previous products/series and current products/series table."
     },
     {
         "step": 2,
         "title": "Create new index",
-        "text": "Step 2, create a new index in azure search engine. Rememer that you should follow the azure search engine namespace rules to create the index."
+        "text": "Create a new index in azure search engine. Rememer that you should follow the azure search engine namespace rules to create the index."
     },
     {
         "step": 3,
         "title": "Change indexing target index. (Manually)",
-        "text": "Step 3, open infra-liber-terraform, change SEARCH_INDEXES_NAMES value, to make sure that the new SEARCH_INDEXES_NAMES points to the new index. Then apply the terraform plan. Ensure that the key vault as the new index name secret. Deploy the service-search-indexer in order to ingest into its configuration of the new index."
+        "text": "Open infra-liber-terraform, manually change SEARCH_INDEXES_NAMES value, to make sure that the new SEARCH_INDEXES_NAMES points to the new index. Then apply the terraform plan. Ensure that the key vault as the new index name secret. Deploy the service-search-indexer in order to ingest into its configuration of the new index."
     },
     {
         "step": 4,
         "title": "Importing data",
-        "text": "Step 4, click “import data” button to trigger the auto work flow. This action will import data from klopotek through sftp service, then transform the xml data to json, and keep the data in database. Then through service-search-indexer, the data exports to azure search engine."
+        "text": "Click “import data” button to trigger the auto work flow. This action will import data from klopotek through sftp service, then transform the xml data to json, and keep the data in database. Then through service-search-indexer, the data exports to azure search engine."
     },
     {
         "step": 5,
         "title": "Change searching index. (Manually)",
-        "text": "Step 5, Deploy the service-search-api in order to ingest into its configuration of the new index."
+        "text": "Manually deploy the service-search-api in order to ingest into its configuration of the new index."
     }
 ]

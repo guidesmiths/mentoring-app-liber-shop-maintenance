@@ -4,7 +4,7 @@ import { Layout } from '../../common';
 const CreateIndexPage = () => {
 
   return (
-    <Layout title='Current Index'>
+    <Layout step={2}>
       create index page
     </Layout>
   );
