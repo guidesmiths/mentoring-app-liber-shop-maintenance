@@ -29,10 +29,11 @@ const Layout = ({ children, title, step }) => {
         {step ? <Indicator num={step} color={colors.color_main} size={50} /> : <h2>{title}</h2>}
       </div>
       <div className="nav_vertical">
-        <Nav />
+        <Nav currentStep={step} />
       </div>
       <div className='content'>
         {content}
+        <span className="separator" />
         {children}
       </div>
     </div>

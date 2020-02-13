@@ -7,9 +7,9 @@ const ImportDataPage = () => {
 
   return (
     <Layout step={4}>
-      <div>
+      <div className="importDataPage">
         <Input type='optional' options={dbOptions.liber_env} />
-        <Button text="Import Data" />
+        <Button text="Import Data" className="button" />
       </div>  
     </Layout>
   );

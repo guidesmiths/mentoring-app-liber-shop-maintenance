@@ -50,4 +50,8 @@
     .content{
         grid-area: content;
     }  
+    .separator{
+        display: block;
+        margin-bottom: 40px;
+    }
 }

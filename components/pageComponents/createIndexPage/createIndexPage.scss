@@ -1,0 +1,24 @@
+@import '../../../styles/variables';
+
+.createIndexPage{
+    .table{
+       
+    }
+
+    .row{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-bottom: 1px solid $color_inActive;
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+    }
+
+    .indexName{
+        justify-self: start;
+    }
+
+    .viewButton{
+        width: 100px;
+    }
+}
