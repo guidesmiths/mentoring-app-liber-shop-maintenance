@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import './input.scss';
 
-const Input = ({ type = 'default', value = '', options = [], placeholder = '', className, width }) => {
-
-  const [seletedValue, setSelectedValue] = useState('');
-
-  const handleSelect = (value) => {
-    setSelectedValue(value);
-  }; 
+const Input = ({ type = 'default', value = '', options = [], placeholder = '', className, width, onSelect = () => {} }) => {
 
   const defaultInput = (value) => <input value={value} placeholder={placeholder} />;
 
@@ -16,11 +10,11 @@ const Input = ({ type = 'default', value = '', options = [], placeholder = '', c
 
     return(
       <>
-        <input value={seletedValue} readOnly placeholder={placeholder} />
+        <input value={value} readOnly placeholder={placeholder} />
         <ul className='options'>
           {options.map(option => (
             <li 
-              onClick={()=>handleSelect(option)}
+              onClick={()=>onSelect(option)}
               key={option}
               className='option-list'
               // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role

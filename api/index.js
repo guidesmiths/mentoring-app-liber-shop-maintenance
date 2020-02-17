@@ -5,7 +5,10 @@ const getIndex = async () => {
   return data;
 };
 
+const clearDB = async (env) =>  axios.post(`http://localhost:3008/api/clearDB?env=${env}`);
+
+
 export{
-  // eslint-disable-next-line import/prefer-default-export
-  getIndex
+  getIndex,
+  clearDB
 };
