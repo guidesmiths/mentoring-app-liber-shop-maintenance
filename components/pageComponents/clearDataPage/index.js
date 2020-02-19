@@ -7,11 +7,27 @@ import { clearDB } from '../../../api';
 const ClearDataPage = () => {
 
   const [seletedValue, setSelectedValue] = useState('');
+  const [msg, setMsg] = useState('');
+  const [showMsg, setShowMsg] = useState(false);
+
   const handleSelect = (value) => {
     setSelectedValue(value);
   }; 
 
   const getEnv = (val) => val.split('-')[1];
+
+  const handleOnClick = async () => {
+    const env = getEnv(seletedValue);
+    const { data } = await clearDB(env);
+    setMsg(data);
+    setShowMsg(true);
+  };
+
+  const handleClose = () => {
+    setMsg('');
+    setShowMsg(false);
+    setSelectedValue('');
+  };
 
   return (
     <Layout step={1}>
@@ -29,9 +45,24 @@ const ClearDataPage = () => {
         <Button
           text={buttonText.DELETE_DB}
           className='item'
-          onClick={() => clearDB(getEnv(seletedValue))}
+          onClick={handleOnClick}
         />
       </div> 
+
+      {
+        showMsg && (
+          <div className="info-box-wrapper">
+            <div className="info-box">
+              <h3>{msg}</h3>
+              <Button 
+                text='close'
+                onClick={handleClose}
+              />
+            </div>
+          </div>
+          
+        )
+      }
     </Layout>
   );
 };

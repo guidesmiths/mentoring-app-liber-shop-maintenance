@@ -37,6 +37,9 @@ const CreateIndexPage = (props) => {
               {renderRow(index)}
             </div>
           ))}
+          <div className="createBtn">
+            <Button text="Create new index" />
+          </div>
           
         </div>
        
